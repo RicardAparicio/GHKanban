@@ -1,1 +1,6 @@
-include ':app'
+include ':app', ':adapters', ':loaders', ':common', ":rxutil"
+
+project(':adapters').projectDir = file('modules/adapters')
+project(':loaders').projectDir = file('modules/loaders')
+project(':rxutil').projectDir = file('modules/rxutil')
+project(':common').projectDir = file('modules/common')

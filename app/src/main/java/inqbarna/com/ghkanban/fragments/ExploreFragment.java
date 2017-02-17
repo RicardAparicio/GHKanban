@@ -31,7 +31,7 @@ public class ExploreFragment extends Fragment {
     public View onCreateView(
             LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         RecyclerviewBinding binding = DataBindingUtil.inflate(inflater, R.layout.recyclerview, container, false);
-        binding.setModel(new ExploreVM());
+        binding.setModel(new ExploreVM(getActivity()));
         return binding.getRoot();
     }
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="model" type="inqbarna.com.ghkanban.viewmodel.RepoVM"/>
+        <variable name="handler" type="inqbarna.com.ghkanban.viewmodel.BaseRepoListVM.RepoHandler"/>
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp"
+                  android:onClick="@{() -> handler.onRepoClicked(model)}"
+                  android:orientation="vertical">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_gravity="center"
+                  android:padding="10dp"
+                  android:textSize="30sp"
+                  android:background="@android:color/darker_gray"
+                  android:textColor="@android:color/white"
+                  android:text="@{model.name, default=Test}"
+                  android:gravity="center"/>
+
+    </LinearLayout>
+</layout>

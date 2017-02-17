@@ -31,7 +31,7 @@ public class LocalFragment extends Fragment {
     public View onCreateView(
             LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         RecyclerviewBinding binding = DataBindingUtil.inflate(inflater, R.layout.recyclerview, container, false);
-        binding.setModel(new LocalVM());
+        binding.setModel(new LocalVM(getActivity()));
         return binding.getRoot();
     }
 
